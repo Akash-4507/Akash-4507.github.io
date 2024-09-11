@@ -1,0 +1,363 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            
+        }
+    
+    *::-webkit-scrollbar-track
+    {
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,0.3);
+      border-radius: 10px;
+      background-color: #F5F5F5;
+    }
+    
+    *::-webkit-scrollbar
+    {
+      width: 12px;
+      background-color: #F5F5F5;
+    }
+    
+    *::-webkit-scrollbar-thumb
+    {
+      border-radius: 10px;
+      -webkit-box-shadow: inset 0 0 6px rgba(0,0,0,.3);
+      background-color: #555;
+    }
+
+        body {
+            
+            background-color:#f5f5f5;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            display: flex;
+            flex-direction: column;
+            justify-content: start;
+            align-items: center;
+        }
+        .section1 {
+            width: 70%;
+            height: 10rem;
+            /* background-color: aquamarine;*/
+            background: #000046;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1CB5E0, #000046); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            border-radius: 10px;
+            position:relative;
+
+        }
+        .profile-img-section {
+            
+            width: 13%;
+            background: rgba( 212, 206, 206, 0.6 );
+box-shadow: 0 2px 2px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 2px );
+-webkit-backdrop-filter: blur( 3px );
+border-radius: 100px;tar
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+            height: 100%;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+           
+        }
+        .profile-data {
+            width: 40%;
+            display: flex;
+            
+            flex-direction: column;
+            justify-content: center;
+            align-items:center;
+            color: white;
+        }
+        .profile-img {
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+background: rgba( 212, 206, 206, 0.6 );
+box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
+backdrop-filter: blur( 20px );
+-webkit-backdrop-filter: blur( 20px );
+border-radius: 10px;
+border: 1px solid rgba( 255, 255, 255, 0.18 );
+            height: 10rem;
+            width: 10rem;
+            border-radius: 50%;
+        }
+        .section2 {
+            width: 70%;
+            height: 10rem;
+            /* background-color: aquamarine; */
+            border: 1px solid rgb(31, 4, 150);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            border-radius: 10px;
+            /* padding: 10px; */
+        }
+        .section3 {
+            width: 70%;
+            height: 15rem;
+            /* background-color: aquamarine; */
+            border: 1px solid rgb(50, 13, 185);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+            border-radius: 10px;
+            /* padding: 10px; */
+        }
+        .section4 {
+            width: 70%;
+            height: 10rem;
+            /* background-color: aquamarine; */
+            border:1px solid rgb(50, 13, 185);
+            display: flex;
+               flex-direction: column;
+               gap: 1rem;
+            justify-content: center;
+            align-items: start;
+            border-radius: 10px;
+            /* padding: 10px; */
+        }
+        .section5 {
+            width: 70%;
+            height: 15rem;
+            /* background-color: aquamarine; */
+            border: 1px solid rgb(50, 13, 185);
+            display: flex;
+            flex-direction: column;
+            justify-content:center;
+            align-items: start;
+            border-radius: 10px;
+            /* padding: 10px; */
+        }
+        .section6{
+
+            width: 70%;
+            height: 3rem;
+            background: #000046;  /* fallback for old browsers */
+background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+background: linear-gradient(to right, #1CB5E0, #000046);
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            border-radius: 10px;
+            font-weight: bold;
+            
+        }
+        .section-title {
+            /* height: 10%; */
+            color: aquamarine;
+            font-weight: bold;
+        }
+        .ed-table {
+            width: 100%;
+            padding-left: 20px;
+            border: 1px solid gray;
+            border-radius: 10px;
+            border-collapse: collapse;
+        }
+        th{]
+            color:white;
+            background: #000046;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #1CB5E0, #000046);
+        }
+        th, td {
+            padding: 1rem;
+            
+            border:1px solid gray;
+        }
+        .companies {
+            font-weight: bold;
+            color: rgb(15, 17, 16);
+        }
+        .color-primary
+        {
+            align-content: top;
+            color:black;
+            font-size: larger;
+        }
+        .p-content{
+            font-size:larger;
+        }
+        .skills-class{
+            margin: 10px;
+            margin-left: 30px;
+            display:flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: start;
+        }
+        li{
+            list-style: square;
+            margin-left: 2rem;
+            padding-top: 8px;
+        }
+        .text-white{
+            color:aliceblue;
+        }
+        .i-content{
+            margin:1px;
+        }
+
+        .buttongit {
+            display: flex;
+            justify-content: flex-start;
+            align-items: start;
+            padding: 10px 15px;
+            gap: 15px;
+            background: #000046;  /* fallback for old browsers */
+            background: -webkit-linear-gradient(to right, #1CB5E0, #000046);  /* Chrome 10-25, Safari 5.1-6 */
+            background: linear-gradient(to right, #1CB5E0, #000046);a;
+            outline: 3px #181717 solid;
+            outline-offset: -3px;
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            transition: 400ms;
+          }
+          
+          .buttongit .text {
+            color: white;
+            font-weight: 700;
+            font-size: 1em;
+            transition: 400ms;
+          }
+          
+          .buttongit svg path {
+            transition: 400ms;
+          }
+          
+          .buttongit:hover {
+            background-color: transparent;
+          }
+          
+          .button:hover .text {
+            color: #240ec7;
+          }
+          
+          .button:hover svg path {
+            fill: #464343;
+          }
+        </style>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+        <link rel="stylesheet" href="./Assets/img/akpro.jpg">
+</head>
+<body>
+    <div class="section1">
+        <div class="profile-img-section">
+        <img class="profile-img" src="./Assets/img/akpro.jpg" alt="dog">
+        </div>
+       <div class="profile-data">
+         <h1>
+            AKASH A    
+        </h1>
+        <h3 >
+            akashanand9790@gmail.com
+          </h3>
+       </div>
+       </div>
+       <div class="section2">
+        <h1 class="color-primary">
+            ABOUT ME:
+        </h1>
+        <br>
+        <p class="p-content">
+           I'm currently pursuing Third-year IT student and  proficient in the MERN stack and Spring framework, with a strong focus on data structures and algorithms. Demonstrates a commitment to mastering key technologies and enhancing problem-solving skills. Eager to apply knowledge and drive innovation in a dynamic software development environment.
+        </p>
+    </div>
+    <div class="section2">
+        <h1 class="color-primary">
+            Objectiive:
+        </h1>
+        <br>
+        <p class="p-content">
+            Seeking a challenging position in dynamic software development environment where I can utilize my skills to contribute to the success of the working company .
+        </p>
+    </div>
+    <div class="section3">
+        <h1 class="color-primary">
+            Education:
+        </h1>
+    <table class="ed-table">
+        <tr>
+            <th>degree</th>
+            <th>campus</th>
+            <th>score</th>
+        </tr>
+        <tr>
+        <td>HIGH SCHOOL(10th)</td>
+        <td>SVM</td>
+        <td>95</td>
+        </tr>
+        <tr>
+        <td>HIGHER SECONDARY(12th)</td>
+        <td>SBK</td>
+        <td>92</td>
+        </tr>
+        <tr>
+        <td>B.TECH IT</td>
+        <td>SSIET</td>
+        <td>85</td>
+        </tr>
+    </table>
+    </div>
+    <div class="section4">
+        <h1 class="color-primary">Internships:</h1>
+        <p class="i-content">
+            <span class="companies" > Web Development Intern </span>
+            in November 2023
+
+Contributed to front-end and back-end development tasks using HTML, CSS, JavaScript, and related technologies.
+Assisted in creating responsive web designs and enhancing user experience.
+        </p>
+        
+    </div>
+    <div class="section5">
+       <h1 class="color-primary">
+        SKILLS
+       </h1>
+       <ol class="skills-class">
+       <li>Spring Boot: Proficient in building and deploying Java-based applications with Spring Boot.</li>
+       <li>MERN Stack: Experienced with MongoDB, Express.js, React, and Node.js for full-stack development.</li>
+       <li>Data Structures & Algorithms (DSA): Strong problem-solving skills with a focus on efficient algorithm design and optimization.</li>
+       <li>Version Control: Skilled in using Git for version control and collaborative development.</li> 
+       <li>Problem Solving: Adept at analyzing and resolving complex technical challenges.</li>
+       <li>Leadership Qualities: Demonstrated ability to lead projects and collaborate effectively in team environments.</li>
+    </ol>
+    </div>
+
+    <div class="section6">
+      <a href="tel:9384547684"><i class="fa-solid fa-phone text-white"></i></a>
+      <a href="mailto:akashanand9790@gmail.com"><i class="fa-solid fa-envelope text-white"></i></a>
+      <a href="https://www.linkedin.com/home?originalSubdomain=in" target="blank"><i class="fa-brands fa-linkedin text-white"></i></a>
+    </div>
+    <button class="buttongit" onclick="github()">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M12 0.296997C5.37 0.296997 0 5.67 0 12.297C0 17.6 3.438 22.097 8.205 23.682C8.805 23.795 9.025 23.424 9.025 23.105C9.025 22.82 9.015 22.065 9.01 21.065C5.672 21.789 4.968 19.455 4.968 19.455C4.422 18.07 3.633 17.7 3.633 17.7C2.546 16.956 3.717 16.971 3.717 16.971C4.922 17.055 5.555 18.207 5.555 18.207C6.625 20.042 8.364 19.512 9.05 19.205C9.158 18.429 9.467 17.9 9.81 17.6C7.145 17.3 4.344 16.268 4.344 11.67C4.344 10.36 4.809 9.29 5.579 8.45C5.444 8.147 5.039 6.927 5.684 5.274C5.684 5.274 6.689 4.952 8.984 6.504C9.944 6.237 10.964 6.105 11.984 6.099C13.004 6.105 14.024 6.237 14.984 6.504C17.264 4.952 18.269 5.274 18.269 5.274C18.914 6.927 18.509 8.147 18.389 8.45C19.154 9.29 19.619 10.36 19.619 11.67C19.619 16.28 16.814 17.295 14.144 17.59C14.564 17.95 14.954 18.686 14.954 19.81C14.954 21.416 14.939 22.706 14.939 23.096C14.939 23.411 15.149 23.786 15.764 23.666C20.565 22.092 24 17.592 24 12.297C24 5.67 18.627 0.296997 12 0.296997Z" fill="white"></path>
+        </svg>
+        <p class="text">Click me</p>
+      </button>
+      <script>
+        function github()
+        {
+            window.open('https://github.com/Akash-4507');
+        }
+      </script>
+      
+
+</body>
+</html>
